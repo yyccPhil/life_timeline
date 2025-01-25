@@ -325,7 +325,7 @@ h1{
 				if (link[3] !== undefined) {
 					link_attr = " title='" + link[3] + "'";
 				}
-				d.text = d.text.replace(link[0], "<a href='" + link[2] + "'" + link_attr + ">" + link[1] + "</a>");
+				d.text = d.text.replace(link[0], "<a target=\'_blank\' href='" + link[2] + "'" + link_attr + ">" + link[1] + "</a>");
 			}
 
 			return '<div class="event" style="margin-left: ' + offset.toFixed(2) + 'px">'
