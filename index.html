@@ -222,7 +222,8 @@ h1{
 		},
 		fetch: function(fn){
 			var xhr = new XMLHttpRequest();
-			xhr.open('GET', 'life.md', true);
+			// add timestamp to avoid cache
+    			xhr.open('GET', 'life.md?' + new Date().getTime(), true);
 			xhr.onload = function(){
 				if (xhr.status == 200) fn(xhr.responseText);
 			};
